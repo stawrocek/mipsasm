@@ -1,0 +1,32 @@
+#this is simple hello world
+#it checks if sections and assembler dirrectives are handled correctly
+
+.data ## Data declaration section
+.asciiz "HELLO WORLD!\n"
+.asciiz "BD"
+.align 2
+.ascii "C"
+.ascii "DDDDD"
+.byte 1 2 3 0xdd
+.half 0xddee
+.word 0xdeadc0de
+
+.ascii "A"
+.align 3
+.byte 1
+.byte 2
+.byte 3
+.byte 4
+.space 8
+.asciiz "ABAB"
+
+.org 3
+.asciiz "EEEE"
+
+.text 
+main: 
+ori $v0, $0, 4 
+lui $a0, 0x1001
+syscall 
+addi $v0, $zero, 6 
+syscall

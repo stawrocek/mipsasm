@@ -1,0 +1,37 @@
+#this test checks all supported instructions
+#I compared results to MARS output
+
+.text
+main:
+lui		$1 10
+addi		$t4, $zero, 12
+addiu		$t5, $sp, 10
+slti		$s0, $zero, -10000
+sltiu		$s1, $s0, 1337
+andi		$s4, $gp, 123
+ori 		$s4, $s6, 101
+xori		$s7, $v0, 0xAAAA
+
+sll		$s2, $s2, 4
+srl		$s3, $s2, 2
+sra		$s1, $t8, 3
+sllv		$s0, $t9, $k0
+srlv		$s0, $s1, $k1
+srav		$s0, $s1, $s3
+mfhi		$s0
+mthi		$s1
+mflo		$s2
+mtlo		$s3
+mult		$s4, $s5
+multu 		$s6, $s7
+div		$s7, $t0
+divu		$t1, $t2
+add		$t3, $t4, $t5
+addu		$t6, $t7, $t8
+and		$t9, $a0, $a1
+or 		$a2, $a3, $k0
+xor 		$s0, $gp, $sp
+nor		$s1, $k1, $fp
+slt		$s2, $k0, $ra
+sltu		$s2, $k0, $ra
+

@@ -1,0 +1,13 @@
+#this test tests different register naming conventions in mips
+#and parser corner cases
+
+.text 
+main: 
+ori $v0, $zero, 4
+ori $v0, $0, 0x4
+
+ori $v0,$zero,4
+ori $v0,  ,$0,4  #test mars supported commas
+
+ori $v0,$0,4#comment test
+

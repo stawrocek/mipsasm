@@ -1,0 +1,28 @@
+.text
+main:
+00400000	34020004		ori $v0, $0, 4
+00400004	3c041001		lui $a0, 0x1001
+00400008	0000000c		syscall
+0040000c	20020006		addi $v0, $zero, 6
+00400010	0000000c		syscall
+
+.data
+10010000	48454c4c4f20574f524c44215c6e00		.asciiz "HELLO WORLD!\n"
+1001000f	424400		.asciiz "BD"
+10010012	0000		.align 2
+10010014	43		.ascii "C"
+10010015	4444444444		.ascii "DDDDD"
+1001001a	010203dd		.byte 1 2 3 0xdd
+1001001e	ddee		.half 0xddee
+10010020	deadc0de		.word 0xdeadc0de
+10010024	41		.ascii "A"
+10010025	000000		.align 3
+10010028	01		.byte 1
+10010029	02		.byte 2
+1001002a	03		.byte 3
+1001002b	04		.byte 4
+1001002c	0000000000000000		.space 8
+10010034	4142414200		.asciiz "ABAB"
+.org 3
+1001003c	4545454500		.asciiz "EEEE"
+
